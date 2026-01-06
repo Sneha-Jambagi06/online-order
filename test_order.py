@@ -1,4 +1,4 @@
-from order_system import Order
+from order import Order
 
 def test_total_price():
     order = Order(1, "Laptop", 2, 50000)
