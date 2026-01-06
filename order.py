@@ -1,12 +1,9 @@
 import sys
-
 def calculate_total_amount(prices, quantities):
     total = 0
     for p, q in zip(prices, quantities):
         total += p * q
     return total
-
-
 def order_status(total_amount):
     if total_amount >= 5000:
         return "Premium Order"
@@ -14,11 +11,8 @@ def order_status(total_amount):
         return "Standard Order"
     else:
         return "Basic Order"
-
-
 if __name__ == "__main__":
     script_name = sys.argv[0]
-
     if len(sys.argv) > 4:
         customer_name = sys.argv[1]
         product_name = sys.argv[2]
@@ -31,11 +25,9 @@ if __name__ == "__main__":
         prices = [1000, 1500, 500]
         quantities = [1, 2, 3]
         print("No input given - using default values:")
-
     total_items = sum(quantities)
     total_amount = calculate_total_amount(prices, quantities)
     status = order_status(total_amount)
-
     print("\n========== Online Order Processing ==========")
     print("Script Name:", script_name)
     print("Customer Name:", customer_name)
